@@ -1,0 +1,86 @@
+-------------------------------------------
+
+-               Description              -
+
+-------------------------------------------
+
+
+
+These scripts replace the UI reassignment functionality(Admin->Workflow->Reassign) for approver and reviewer.
+
+
+
+-------------------------------------------
+
+-               Instructions              -
+
+-------------------------------------------
+
+
+
+1. Open command-line
+
+2. Enter into directory where is located r_reviewer.sql
+
+3. Type in command-line:
+
+
+	sqlplus /nolog
+
+
+6. If you want to reassign reviewer, type:
+
+
+
+	 SQL>@changed_r_reviewer.sql
+
+	
+
+  If you want to reassign approver, type:
+
+	
+
+	 SQL>@changed_r_approver.sql
+
+	
+
+7. Enter your credentials, TNS and Ids:
+
+
+
+	$> Enter the user/schema for the CURR schema (e.g.  YOUR_NAME_CURR)
+
+	Enter value for 1: your_current_schema_name
+
+	$> Enter the *password* for the CURR  schema (e.g. YOUR_PASSWORD_CURR)
+
+	Enter value for 2: your_password
+
+	$> Enter the user/schema for the HIST schema (e.g.  YOUR_NAME_HIST)
+
+	Enter value for 3: your_history_schema_name
+
+	$> Enter the *password* for the HIST  schema (e.g. YOUR_PASSWORD_HIST)
+
+	Enter value for 4: your_password
+
+	$> Enter THE service NAME (e.g. ELVIS)
+
+	Enter value for 5: your_tns
+
+	$> Enter the Action plan Id
+
+	Enter value for 6: your_action_plan_id
+
+	$> Enter the Id of current reviewer user (If you enter '0' then all reviewer of current Action plan will be deleted and changed at new assignee)
+
+	Enter value for 7: current_reviewer_id
+
+	$> Enter the Id of new assignee
+
+	Enter value for 8: new_assignee_id
+
+
+
+8. Verify the log reassign_reviewer.txt for errors.
+
